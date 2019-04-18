@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function temperataure(doC) {
+            this.doC = doC;
+            this.getDoF = function () {
+                return (this.doC * 1.8) + 32
+            }
+
+            this.getDoKevin = function () {
+               return (this.doC + 273.15)
+            }
+        }
+
+        let Temperature = new temperataure(25);
+        document.write("Do F la " + Temperature.getDoF() + "</br>");
+        document.write("Do K la " + Temperature.getDoKevin())
+    </script>
+</body>
+</html>
